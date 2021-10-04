@@ -175,40 +175,40 @@
 
 // // Episode 8..
 
-const scenario = {
-  murderer: 'Mrs. Peacock',
-  room: 'Conservatory',
-  weapon: 'Lead Pipe'
-};
+// const scenario = {
+//   murderer: 'Mrs. Peacock',
+//   room: 'Conservatory',
+//   weapon: 'Lead Pipe'
+// };
 
-const changeScenario = function() {
-  scenario.murderer = 'Mrs. Peacock';
-  scenario.room = 'Dining Room';
+// const changeScenario = function() {
+//   scenario.murderer = 'Mrs. Peacock';
+//   scenario.room = 'Dining Room';
 
-  const plotTwist = function(room) {
-    if (scenario.room === room) {
-      scenario.murderer = 'Colonel Mustard';
-    }
+//   const plotTwist = function(room) {
+//     if (scenario.room === room) {
+//       scenario.murderer = 'Colonel Mustard';
+//     }
 
-    const unexpectedOutcome = function(murderer) {
-      if (scenario.murderer === murderer) {
-        scenario.weapon = 'Candle Stick';
-      }
-    }
+//     const unexpectedOutcome = function(murderer) {
+//       if (scenario.murderer === murderer) {
+//         scenario.weapon = 'Candle Stick';
+//       }
+//     }
 
-    unexpectedOutcome('Colonel Mustard');
-  }
+//     unexpectedOutcome('Colonel Mustard');
+//   }
 
-  plotTwist('Dining Room');
-}
+//   plotTwist('Dining Room');
+// }
 
-const declareWeapon = function() {
-  return `The weapon is ${scenario.weapon}.`
-}
+// const declareWeapon = function() {
+//   return `The weapon is ${scenario.weapon}.`
+// }
 
-changeScenario();
-const verdict = declareWeapon();
-console.log(verdict);
+// changeScenario();
+// const verdict = declareWeapon();
+// console.log(verdict);
 
 // Runs as normal.. The weapon is Candle Stick, the first two functions don't change the weapon, until the unexpectedOutcome..
 
@@ -228,7 +228,47 @@ console.log(verdict);
 // const verdict = declareMurderer();
 // console.log(verdict);
 
+// Runs as normal.. The murderer is Professor Plum, as the murder is only changed to Mrs. Peacock within the scope of the if statement..
 
 // // Extensions..
 
 // // Make up your own episode!
+
+
+const scenario = {
+  murderer: 'Iain',
+  room: 'level 2, Rum Fest..',
+  weapon: 'Stone Cold Stunner!'
+};
+
+const changeScenario = function() {
+  scenario.murderer = 'Neil';
+  scenario.room = 'the Skate Park..',
+  scenario.weapon = 'safeway rotisserie chicken!'
+
+  const plotTwist = function(room) {
+    if (scenario.room === room) {
+      scenario.murderer = 'Some kid from Iain\'s past..';
+      scenario.room = 'Some East End park, it\'s always a park..'
+    }
+
+    const unexpectedOutcome = function(murderer) {
+      if (scenario.murderer === murderer) {
+        scenario.weapon = 'A sandwich full of fecal matter..';
+      }
+    }
+
+    unexpectedOutcome('Some kid from Iai\'ns past..');
+  }
+
+  plotTwist('Some East End park, it\'s always a park..');
+}
+
+const declareWeapon = function() {
+  return `The weapon is still a ${scenario.weapon}, but why..`
+}
+
+changeScenario();
+const verdict = declareWeapon();
+console.log(verdict);
+
