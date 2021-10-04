@@ -265,7 +265,7 @@ const changeScenario = function() {
 }
 
 const declareWeapon = function() {
-  return `The weapon is still a ${scenario.weapon}, but why..`
+  return `The weapon is still a ${scenario.weapon}, he loves it, but why..`
 }
 
 changeScenario();
