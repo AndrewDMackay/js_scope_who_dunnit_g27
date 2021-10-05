@@ -258,11 +258,19 @@ const changeScenario = function() {
       }
     }
 
-    unexpectedOutcome('Some kid from Iai\'ns past..');
+      const postCreditReveal = function(murderer) {
+        if (scenario.murderer === 'Some kid from Iain\'s past..') {
+          scenario.murderer = 'It was actually Neil all along, not some kid in the park.. Boom!';
+        }
+      }
+
+      unexpectedOutcome('Some kid from Iai\'ns past..');
+    }
+
+    plotTwist('Some East End park, it\'s always a park..');
   }
 
-  plotTwist('Some East End park, it\'s always a park..');
-}
+postCreditReveal('Some kid from Iain\'s past..');
 
 const declareWeapon = function() {
   return `The weapon is still a ${scenario.weapon}, he loves it, but why..`
