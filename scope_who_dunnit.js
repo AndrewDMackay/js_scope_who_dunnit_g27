@@ -260,7 +260,7 @@ const changeScenario = function() {
 
       const postCreditReveal = function(murderer) {
         if (scenario.murderer === 'Some kid from Iain\'s past..') {
-          scenario.murderer = 'It was actually Neil all along, not some kid in the park.. Boom!';
+          scenario.murderer = 'It was actually Neil all along, not some kid in the park, well it was in the park, but it was Neil.. As I said previously..';
         }
       }
 
